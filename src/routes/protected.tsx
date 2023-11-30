@@ -16,8 +16,5 @@ export const protectedRoutes = [
         element: Home,
       },
     ],
-    // loader: () => {
-    //   console.log("router guard?");
-    // },
   },
 ];
