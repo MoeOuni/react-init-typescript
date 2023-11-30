@@ -1,10 +1,14 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, ReactNode } from "react";
 import UserContext from "./UserContext";
 
+interface UserContextProviderProps {
+  children: ReactNode;
+}
+
 // Create the UserContextProvider component
-const UserContextProvider: React.FC = ({
+const UserContextProvider: React.FC<UserContextProviderProps> = ({
   children,
-}: React.PropsWithChildren<{}>) => {
+}) => {
   // Define the user state
   const [user, setUser] = useState<any>(null);
 

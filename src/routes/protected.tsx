@@ -1,8 +1,8 @@
-import { lazyLoad } from "@/utils/lazyLoad";
+import { lazyLoad } from "@utils/lazyLoad";
 
-import Root from "@/layouts/Root";
+import Root from "@layouts/Root";
 
-const Home = lazyLoad(() => import("@/pages/Home"), "default");
+const Home = lazyLoad(() => import("@pages/Home"), "default");
 
 export const protectedRoutes = [
   {

@@ -1,8 +1,10 @@
 import "./index.css";
 import React from "react";
-import routes from "./routes/index";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
+import routes from "./routes";
+import AppContextProvider from "@contexts/AppContextProvider";
+import UserContextProvider from "@contexts/UserContextProvider";
 
 const App = () => {
   return useRoutes(routes);
@@ -10,8 +12,12 @@ const App = () => {
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <AppContextProvider>
+      <UserContextProvider>
+        <Router>
+          <App />
+        </Router>
+      </UserContextProvider>
+    </AppContextProvider>
   </React.StrictMode>
 );
