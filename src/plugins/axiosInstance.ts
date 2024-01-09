@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
-import localStorageService from "../services/localStorageService";
+import localStorageService from "@services/localStorageService";
 import ErrorHandler from "@/services/errorHandler";
 
 const apiHost: string = import.meta.env.VITE_API_REST_API_URL;

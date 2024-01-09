@@ -2,7 +2,7 @@ import { lazyLoad } from "@utils/lazyLoad";
 
 import Root from "@layouts/Root";
 
-const Home = lazyLoad(() => import("@pages/Home"), "default");
+const RootPage = lazyLoad(() => import("@pages/RootPage"), "default");
 
 export const protectedRoutes = [
   {
@@ -12,8 +12,7 @@ export const protectedRoutes = [
     children: [
       {
         index: true,
-        // path: '/home',
-        element: Home,
+        element: RootPage,
       },
     ],
   },
