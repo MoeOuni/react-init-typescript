@@ -11,14 +11,16 @@ import InputNumberSlider from "@inputs/InputNumberSlider";
 import AdultBirthDatePicker from "@inputs/AdultBirthDatePicker";
 import InputNumberSeparator from "@inputs/InputNumberSeparator";
 import PhoneNumberInput from "@inputs/PhoneNumberInput";
-import React from "react";
+import AppContext from "@/contexts/AppContext";
+import { AppContextProps } from "@/types";
 
 const CustomForm = () => {
+  const { setFormValues, setOpen } = useContext(AppContext) as AppContextProps;
   const [form] = Form.useForm();
-  const [formValues, setFormValues] = React.useState<any>({});
 
   const handleFinish = (values: any) => {
     setFormValues(values);
+    setOpen(true);
   };
   return (
     <div>
@@ -85,10 +87,6 @@ const CustomForm = () => {
           </Col>
         </Row>
       </Form>
-      <Typography.Title level={4}>Form Values :</Typography.Title>
-      <Typography>
-        <pre>{JSON.stringify(formValues, null, 2)}</pre>
-      </Typography>
     </div>
   );
 };

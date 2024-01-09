@@ -4,6 +4,7 @@ import { getToken } from "@utils/auth";
 import RootHeader from "./RootHeader";
 import RootFooter from "./RootFooter";
 import { Layout } from "antd";
+import JsonDrawer from "@/components/views/JsonDrawer";
 
 const { Content } = Layout;
 const Root: React.FC = () => {
@@ -33,6 +34,7 @@ const Root: React.FC = () => {
       >
         <Outlet />
       </Content>
+      <JsonDrawer />
       <RootFooter />
     </div>
   );
