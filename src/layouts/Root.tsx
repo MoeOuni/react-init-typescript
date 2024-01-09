@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { getToken } from "@utils/auth";
 import RootHeader from "./RootHeader";
 import RootFooter from "./RootFooter";
 import { Layout } from "antd";
@@ -8,16 +7,6 @@ import JsonDrawer from "@/components/views/JsonDrawer";
 
 const { Content } = Layout;
 const Root: React.FC = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const token = getToken();
-
-    // if (!token) {
-    //   navigate("/login");
-    // }
-  }, []);
-
   return (
     <div style={{ minHeight: "100vh" }}>
       <RootHeader />

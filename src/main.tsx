@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import routes from "./routes";
 import AppContextProvider from "@contexts/AppContextProvider";
-import UserContextProvider from "@contexts/UserContextProvider";
 import { ConfigProvider } from "antd";
 
 import dayjs from "dayjs";
@@ -20,11 +19,9 @@ const App = () => {
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <ConfigProvider locale={frFR}>
     <AppContextProvider>
-      <UserContextProvider>
-        <Router>
-          <App />
-        </Router>
-      </UserContextProvider>
+      <Router>
+        <App />
+      </Router>
     </AppContextProvider>
   </ConfigProvider>
 );
