@@ -1,3 +1,10 @@
 import { lazyLoad } from "@utils/lazyLoad";
 
-export const publicRoutes = [];
+const NotFoundPage = lazyLoad(() => import("@pages/NotFoundPage"), "default");
+
+export const publicRoutes = [
+  {
+    path: "*",
+    element: NotFoundPage,
+  },
+];

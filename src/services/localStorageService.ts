@@ -1,5 +1,4 @@
-const LocalStorageService = (function () {
-      
+const LocalStorageService = (function () {  
     const _clearToken = () => {
         localStorage.removeItem("access_token");
         localStorage.removeItem("refresh_token");

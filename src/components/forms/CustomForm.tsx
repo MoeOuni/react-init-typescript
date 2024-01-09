@@ -1,4 +1,4 @@
-import { Button, Col, Divider, Form, Row, Typography } from "antd";
+import { Button, Col, Divider, Form, Row } from "antd";
 
 import BicInput from "@inputs/BicInput";
 import IbanInput from "@inputs/IbanInput";
